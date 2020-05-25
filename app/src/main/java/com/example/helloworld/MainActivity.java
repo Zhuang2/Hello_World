@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.helloworld.databinding.ActivityHomeBinding;
 import com.example.helloworld.databinding.ActivityMainBinding;
@@ -24,8 +25,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //intent：意图分为显示和隐式
                 //new Intent的参数上下文，目标activity的类
-                Intent intent = new Intent(MainActivity.this,home.class);
-                startActivity(intent);
+                //默认手机号码10086，默认密码12356
+                String phone = mBinding.editPhone.getText().toString();
+                String pwd = mBinding.editPwd.getText().toString();
+                if(phone.equals("10086")&&pwd.equals("123456")){
+                    Intent intent = new Intent(MainActivity.this,home.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(MainActivity.this,"手机号或密码错误",Toast.LENGTH_LONG).show();
+                }
+
             }
         });
     }
