@@ -11,18 +11,20 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".home"></activity>
         <activity android:name=".U_iActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".AliActivity" />
         <activity android:name=".DemoActivity"></activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".CalculatorActivity" />
         <activity android:name=".AlipayActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
     </application>
 
 </manifest>
