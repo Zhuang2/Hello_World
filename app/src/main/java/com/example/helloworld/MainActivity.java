@@ -30,11 +30,18 @@ public class MainActivity extends AppCompatActivity {
                 String pwd = mBinding.editPwd.getText().toString();
                 if(phone.equals("10086")&&pwd.equals("123456")){
                     Intent intent = new Intent(MainActivity.this,home.class);
-                    intent.putExtra("data_phone","10086");
+                    intent.putExtra("data_phone",phone);
                     startActivity(intent);
                 }else{
                     Toast.makeText(MainActivity.this,"手机号或密码错误",Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+        mBinding.buttonRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,RegisterActivity.class);
+                startActivity(intent);
             }
         });
     }

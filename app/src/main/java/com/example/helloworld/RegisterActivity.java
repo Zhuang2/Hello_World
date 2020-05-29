@@ -70,7 +70,7 @@ public class RegisterActivity extends AppCompatActivity {
                         editor.putString("sms_"+phone,temp);
                         editor.apply();
                         toast="注册成功！";
-                        //跳转至登录界面
+                        finish();
                     }
 
                 }
