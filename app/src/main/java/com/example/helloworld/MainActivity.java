@@ -1,7 +1,9 @@
 package com.example.helloworld;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,12 +12,15 @@ import android.widget.Toast;
 
 import com.example.helloworld.databinding.ActivityMainBinding;
 
+import java.util.Objects;
+
 /**
  * @author DELL
  */
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding mBinding;
+    private static final int RESULT_CODE = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     bundle.putSerializable("userInfo",userInfo);
                     Intent intent = new Intent(MainActivity.this, home.class);
                     intent.putExtras(bundle);
-                    startActivity(intent);
+                    startActivityForResult(intent, RESULT_CODE);
                 }else{
                     Toast.makeText(MainActivity.this,"手机号或密码错误",Toast.LENGTH_LONG).show();
                 }
@@ -56,5 +61,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==RESULT_CODE){
+            if (resultCode == RESULT_OK){
+                String s = Objects.requireNonNull(data).getStringExtra(home.EXIT_HOME);
+                Toast.makeText(MainActivity.this,s,Toast.LENGTH_LONG).show();
+            }
+        }
     }
 }
