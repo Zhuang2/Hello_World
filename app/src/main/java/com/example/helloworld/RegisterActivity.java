@@ -10,6 +10,9 @@ import android.widget.Toast;
 
 import com.example.helloworld.databinding.ActivityRegisterBinding;
 
+/**
+ * @author DELL
+ */
 public class RegisterActivity extends AppCompatActivity {
 
     private ActivityRegisterBinding mBinding;
@@ -84,7 +87,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if(checkedId == R.id.radio_man){
                     sex = mBinding.radioMan.getText().toString();
                 }
-                else sex = mBinding.radioWoman.getText().toString();
+                else {sex = mBinding.radioWoman.getText().toString();}
             }
         });
     }

@@ -8,9 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.helloworld.databinding.ActivityHomeBinding;
 import com.example.helloworld.databinding.ActivityMainBinding;
 
+/**
+ * @author DELL
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding mBinding;
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 String temp_phone = sp.getString("phone_"+phone,"error");
                 String temp_pwd = sp.getString("pwd_"+phone,"error");
                 if(phone.equals(temp_phone)&&pwd.equals(temp_pwd)){
-                    Intent intent = new Intent(MainActivity.this,home.class);
+                    Intent intent = new Intent(MainActivity.this, home.class);
                     intent.putExtra("data_phone",phone);
                     startActivity(intent);
                 }else{
