@@ -43,4 +43,6 @@
     <string name="phone">手机号码</string>
     <string name="sex">性别</string>
     <string name="welcome">欢迎使用···</string>
+    <string name="verification">验证信息</string>
+    <string name="new_pwd">请输入新的密码</string>
 </resources>

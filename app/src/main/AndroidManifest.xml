@@ -9,18 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".home"></activity>
-        <activity android:name=".U_iActivity">
-
-        </activity>
+        <activity android:name=".UpdatePwdActivity"></activity>
+        <activity android:name=".ResetPwdActivity" />
+        <activity android:name=".home" />
+        <activity android:name=".U_iActivity" />
         <activity android:name=".AliActivity" />
-        <activity android:name=".DemoActivity"></activity>
-        <activity android:name=".RegisterActivity" >
-
-        </activity>
+        <activity android:name=".DemoActivity" />
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".CalculatorActivity" />
         <activity android:name=".AlipayActivity" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
