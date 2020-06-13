@@ -68,6 +68,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mBinding.textForget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ResetPwdActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
