@@ -21,7 +21,7 @@
 
     <EditText
         android:id="@+id/update_pwd"
-        android:layout_width="0dp"
+        android:layout_width="329dp"
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:drawableStart="@drawable/password"
@@ -29,18 +29,15 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="numberPassword"
-        app:layout_constraintBottom_toTopOf="@+id/button_update"
+        app:layout_constraintBottom_toTopOf="@+id/update_pwd_ok"
         app:layout_constraintEnd_toStartOf="@+id/guideline37"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline36"
-        app:layout_constraintTop_toBottomOf="@+id/text_update"
-        app:layout_constraintVertical_bias="0.219" />
+        app:layout_constraintTop_toBottomOf="@+id/text_update" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="0dp"
+        android:id="@+id/update_pwd_ok"
+        android:layout_width="329dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="236dp"
         android:autofillHints=""
         android:drawableStart="@drawable/password"
         android:drawablePadding="10dp"
@@ -49,19 +46,20 @@
         android:inputType="numberPassword"
         app:layout_constraintBottom_toTopOf="@+id/button_update"
         app:layout_constraintEnd_toEndOf="@+id/update_pwd"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/update_pwd" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/update_pwd"
+        app:layout_constraintTop_toBottomOf="@+id/update_pwd" />
 
     <Button
         android:id="@+id/button_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
         android:text="@string/determine"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintHorizontal_bias="0.547"
-        app:layout_constraintStart_toStartOf="@+id/editText2" />
+        app:layout_constraintEnd_toEndOf="@+id/update_pwd_ok"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/update_pwd_ok"
+        app:layout_constraintTop_toBottomOf="@+id/update_pwd_ok" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline36"
